@@ -12,5 +12,7 @@ public class Camera : MonoBehaviour
         Vector3 newPosition = player.position + translation;
         Vector3 targetPosition = Vector3.Lerp(transform.position, newPosition, Time.fixedDeltaTime * speed);
         transform.position = targetPosition;
+
+        transform.LookAt(player);
     }
 }
